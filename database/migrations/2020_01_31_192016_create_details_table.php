@@ -24,7 +24,7 @@ class CreateDetailsTable extends Migration
             $table->string('nationality');
             $table->string('experience');
             $table->string('address');
-            $table->integer('status');
+            $table->string('status');
             $table->string('language');
             $table->string('phone');
             $table->timestamps();

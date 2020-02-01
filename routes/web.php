@@ -11,4 +11,12 @@
 |
 */
 
-Route::get('/','UserController@index');
+Route::get('/','UserController@index')->name('user.home');
+
+//Admin  Route
+
+Route::group(['prefix'=>'backend'],function (){
+    Route::get('/','AdminController@home')->name('admin.home');\
+    Route::get('details','DetailsController@index')->name('admin.details.index');
+    Route::post('addDetails','DetailsController@addDetails')->name('admin.details.add');
+});
